@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>WeatherOutfitAdvisor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="body">
+        <div class="header">
+            <h1>Weather Outfit Advisor</h1>
+        </div>
+        <div class="main">
+            <div>
+                <p>Input Outfit Checker</p>
+            </div>
+            <div>
+                <input id="input" type="text" placeholder="Eg Sunny or Windy" oninput="this.value = this.value.toLowerCase()">
+            </div>
+            <div>
+                <button onclick=" weatherCheacker()">
+                    Submit
+                </button>
+            </div>
+           
+        </div>
+        <div>
+            <p class="display"></p>
+        </div>
+    </div>
+
+</body>
+<script>
+
+    function weatherCheacker() {
+        let input = document.getElementById('input')
+           
+        let inputs = input.value
+      
+        let text;
+   
+
+        if (inputs === 'sunny') {
+            text = `<p>1. Lightweight and breathable clothing like cotton t-shirts and shorts.</p>
+                      <p>2. Sunglasses to protect the eyes.<p>
+                      <p>3. Sunscreen for skin protection.<p> 
+                    <p>4. A hat to shield the face from direct sunlight. </p>
+            `
+        }else if (inputs === 'rainy'){
+            text =   `<p>1. A waterproof raincoat or poncho.</p>
+            <p>2. Waterproof shoes or boots. </p>
+            <p>3. An umbrella for extra coverage. </p>
+            <p>4. Avoid wearing fabric shoes like canvas sneakers.</p>
+`
+        }
+         else if(inputs === 'cold'){
+            text =   `<p>1. Layered clothing, including a thermal base layer, sweater, and heavy coat.</p>
+            <p>2. Gloves, scarves, and beanies to protect extremities. </p>
+            <p>3. Insulated boots or shoes. </p>
+            <p>4. Wool socks to retain warmth.</p>
+`
+        }else if (inputs === 'cloudy'){
+            text =  `  <p>1. Comfortable and versatile clothing like a light jacket or sweater. </p>
+            <p>2. Closed-toe shoes in case it rains.</p>
+            <p>3. Layered clothing, so you can adjust if it gets warmer or cooler.</p>
+`
+        }else if (inputs === 'windy'){
+            text =   `  <p>1. Wind-resistant or windproof jackets. </p>
+            <p>2. Avoid loose-fitting clothes that could be uncomfortable in strong winds.</p>
+            <p>3. A secure hat or hoodie to keep hair in place.</p>
+`
+        }
+        else{
+          text =   `<p>Sorry, I didn’t understand. Could you try again?</p>`
+        }
+        if(!inputs){
+            return
+        }
+        input.value = ''
+        document.querySelector('.display').innerHTML = text
+    }
+ 
+
+</script>
+
+</html>

@@ -1,0 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+}
+
+.body {
+    background: #fff;
+    margin: 10rem 0 0 0;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.body div h1 {
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0 0 1rem 0;
+    text-align: center;
+}
+
+.main {
+    text-align: center;
+}
+
+.main p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    color: #000000;
+    font-weight: 600;
+}
+
+input {
+    height: 1.9rem;
+    margin: 1rem 0;
+    background-color: #ccc;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: .6rem 1.5rem .6rem .4rem;
+    width: 17rem;
+
+}
+
+button {
+    padding: .5rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #ccc;
+    border: 2px solid #ccc;
+}
+
+.display {
+    margin: 2rem 0 0 0;
+}
+.display p{
+    font-size: 1.2rem;
+    margin: .8rem 0 0 0;
+    font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+}
